@@ -38,4 +38,7 @@ export default {
     img{
         width: 30%;
     }
+    .form-floating{
+        height: 50%;
+    }
 </style>
