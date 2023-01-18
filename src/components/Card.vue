@@ -1,23 +1,23 @@
 <script>
+import { store } from '../store.js';
+
 export default {
-    props:{
-        card:Object
-    },
     data() {
         return {
-            index:0
+            store
         }
     },
+    props:{
+        title:String,
+    }
 }
 </script>
 <template >
     <main>
         <div class="container">
             <div class="row">
-                <div class="card">
-                    <div class="card-image">
-                        <img :src="" alt="img">
-                    </div>
+                <div class="col-12">
+                    <h1>{{ title }}</h1>
                 </div>
             </div>
         </div>

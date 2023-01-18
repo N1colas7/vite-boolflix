@@ -1,6 +1,16 @@
 <script>
+
 export default {
-    
+    data() {
+        return {
+            cardArray:"",
+        }
+    },
+    methods:{
+        callApi:function () {
+            
+        }
+    }
 }
 </script>
 <template>
@@ -14,18 +24,19 @@ export default {
                     <div class="row">
                         <div class="col-6">
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                                <input v-model="cardArray" @keyup="printArray" @change="$emit('select',cardArray)" class="form-control" placeholder="Leave a comment here" id="floatingTextarea">
                                 <label for="floatingTextarea">Search</label>
                             </div>
                         </div>
                         <div class="col-6">
-                            <button type="button" class="btn btn-danger">Cerca</button>
+                            <button type="button" class="btn btn-danger" @click="$emit('callApi')" >Cerca</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+    <AppMain />
 </template>
 <style lang="scss">
     *{
