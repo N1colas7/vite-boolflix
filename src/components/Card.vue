@@ -17,7 +17,7 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1>{{ title }}</h1>
+                    <h3>{{ title }}</h3>
                 </div>
             </div>
         </div>
