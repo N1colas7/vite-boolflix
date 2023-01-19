@@ -47,7 +47,7 @@ export default {
         padding: 2px;
     }
     header{
-        background-color: rgba(0, 0, 0, 0.808);
+        background-color: rgba(0, 0, 0, 0.897);
     }
     img{
         width: 30%;
