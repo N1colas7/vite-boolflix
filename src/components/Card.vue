@@ -1,5 +1,7 @@
 <script>
 import { store } from '../store.js';
+import CountryFlag from 'vue-country-flag-next';
+
 
 export default {
     data() {
@@ -12,6 +14,9 @@ export default {
         original_title: String,
         original_language: String,
         vote_average: String,
+    },
+    components:{
+        CountryFlag
     }
 }
 </script>
@@ -27,7 +32,7 @@ export default {
                         <div class="card-text">
                             <h4>{{ title }}</h4>
                             <p>{{ original_title }}</p>
-                            <p>{{ original_language }}</p>
+                            <country-flag :country='original_language' size='small'/>
                             <p>{{ vote_average }}</p>
                         </div>
                     </div>
