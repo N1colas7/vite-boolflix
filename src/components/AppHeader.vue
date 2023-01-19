@@ -9,6 +9,9 @@ export default {
     methods:{
         callApi:function () {
             
+        },
+        callApiTV:function () {
+            
         }
     }
 }
@@ -29,7 +32,7 @@ export default {
                             </div>
                         </div>
                         <div class="col-6">
-                            <button type="button" class="btn btn-danger" @click="$emit('callApi')" >Cerca</button>
+                            <button type="button" class="btn btn-danger" @click="$emit('callApi');$emit('callApiTv')">Cerca</button>
                         </div>
                     </div>
                 </div>
