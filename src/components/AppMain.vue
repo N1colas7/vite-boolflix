@@ -29,8 +29,13 @@ export default {
 </script>
 <template>
     <AppHeader @select="selectChanged" @callApi="ApiMovie"/>
-    <Card v-for="(item, index) in movieList" :key="index" :movie="item" :title="item.title"/>
+    <div class="container-x">
+        <Card v-for="(item, index) in movieList" :key="index" :movie="item" :title="item.title" :original_title="item.original_title" :original_language="item.original_language" :vote_average="item.vote_average" />
+    </div>
 </template>
 <style lang="scss">
-    
+    .container-x{
+        display: flex;
+        flex-wrap: wrap;
+    }
 </style>

@@ -8,7 +8,10 @@ export default {
         }
     },
     props:{
-        title:String,
+        title: String,
+        original_title: String,
+        original_language: String,
+        vote_average: String,
     }
 }
 </script>
@@ -17,7 +20,17 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h3>{{ title }}</h3>
+                   <div class="card-cards">
+                        <div class="card-image">
+                            <img src=""  alt="img">
+                        </div>
+                        <div class="card-text">
+                            <h4>{{ title }}</h4>
+                            <p>{{ original_title }}</p>
+                            <p>{{ original_language }}</p>
+                            <p>{{ vote_average }}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
