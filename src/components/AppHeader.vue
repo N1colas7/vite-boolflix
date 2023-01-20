@@ -12,7 +12,7 @@ export default {
         },
         callApiTV:function () {
             
-        }
+        },
     }
 }
 </script>
@@ -27,7 +27,7 @@ export default {
                     <div class="row">
                         <div class="col-6">
                             <div class="form-floating">
-                                <input v-model="cardArray" @keyup="printArray" @change="$emit('select',cardArray)" class="form-control" placeholder="Leave a comment here" id="floatingTextarea">
+                                <input v-on:keyup.enter="$emit('callApi');$emit('callApiTv')" v-model="cardArray" @keyup="printArray" @change="$emit('select',cardArray)" class="form-control" placeholder="Leave a comment here" id="floatingTextarea">
                                 <label for="floatingTextarea">Search</label>
                             </div>
                         </div>
